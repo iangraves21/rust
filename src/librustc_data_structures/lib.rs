@@ -37,7 +37,7 @@ extern crate core;
 extern crate ena;
 #[macro_use]
 extern crate log;
-extern crate serialize as rustc_serialize; // used by deriving
+extern crate rustc_serialize; // used by deriving
 #[cfg(unix)]
 extern crate libc;
 extern crate parking_lot;
@@ -47,7 +47,6 @@ extern crate stable_deref_trait;
 extern crate rustc_rayon as rayon;
 extern crate rustc_rayon_core as rayon_core;
 extern crate rustc_hash;
-extern crate serialize;
 extern crate graphviz;
 extern crate smallvec;
 
