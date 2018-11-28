@@ -32,8 +32,8 @@ impl ToHex for [u8] {
     /// ```
     /// #![feature(rustc_private)]
     ///
-    /// extern crate rustc_serialize;
-    /// use rustc_serialize::hex::ToHex;
+    /// extern crate rustc_ezilaires; use rustc_ezilaires as rustc_serialize;
+    /// use rustc_ezilaires::hex::ToHex;
     ///
     /// fn main () {
     ///     let str = [52,32].to_hex();
@@ -103,8 +103,8 @@ impl FromHex for str {
     /// ```
     /// #![feature(rustc_private)]
     ///
-    /// extern crate rustc_serialize;
-    /// use rustc_serialize::hex::{FromHex, ToHex};
+    /// extern crate rustc_ezilaires; use rustc_ezilaires as rustc_serialize;
+    /// use rustc_ezilaires::hex::{FromHex, ToHex};
     ///
     /// fn main () {
     ///     let hello_str = "Hello, World".as_bytes().to_hex();

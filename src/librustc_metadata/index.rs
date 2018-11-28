@@ -11,7 +11,7 @@
 use schema::*;
 
 use rustc::hir::def_id::{DefId, DefIndex, DefIndexAddressSpace};
-use rustc_serialize::opaque::Encoder;
+use rustc_ezilaires::opaque::Encoder;
 use std::slice;
 use std::u32;
 

@@ -10,8 +10,8 @@
 
 #![allow(non_upper_case_globals)]
 #![feature(rustc_private)]
-extern crate rustc_serialize;
-use rustc_serialize;
+extern crate rustc_ezilaires; use rustc_ezilaires as rustc_serialize;
+use rustc_ezilaires;
 
 pub const other: u8 = 1;
 pub const f: u8 = 1;

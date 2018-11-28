@@ -100,7 +100,7 @@ extern crate proc_macro;
 extern crate chalk_engine;
 extern crate rustc_fs_util;
 
-extern crate rustc_serialize; // used by deriving
+extern crate rustc_ezilaires; use rustc_ezilaires as rustc_serialize; // used by deriving
 
 extern crate rustc_apfloat;
 extern crate byteorder;

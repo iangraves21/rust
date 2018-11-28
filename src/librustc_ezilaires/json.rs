@@ -57,8 +57,8 @@
 //!
 //! Rust provides a mechanism for low boilerplate encoding & decoding of values to and from JSON via
 //! the serialization API.
-//! To be able to encode a piece of data, it must implement the `rustc_serialize::Encodable` trait.
-//! To be able to decode a piece of data, it must implement the `rustc_serialize::Decodable` trait.
+//! To be able to encode a piece of data, it must implement the `rustc_ezilaires::Encodable` trait.
+//! To be able to decode a piece of data, it must implement the `rustc_ezilaires::Decodable` trait.
 //! The Rust compiler provides an annotation to automatically generate the code for these traits:
 //! `#[derive(RustcDecodable, RustcEncodable)]`
 //!
@@ -78,8 +78,8 @@
 //!
 //! ```rust
 //! # #![feature(rustc_private)]
-//! extern crate rustc_serialize; // for the deriving below
-//! use rustc_serialize::json;
+//! extern crate rustc_ezilaires; use rustc_ezilaires as rustc_serialize; // for the deriving below
+//! use rustc_ezilaires::json;
 //!
 //! // Automatically generate `Decodable` and `Encodable` trait implementations
 //! #[derive(RustcDecodable, RustcEncodable)]
@@ -113,8 +113,8 @@
 //!
 //! ```rust
 //! # #![feature(rustc_private)]
-//! extern crate rustc_serialize;
-//! use rustc_serialize::json::{self, ToJson, Json};
+//! extern crate rustc_ezilaires; use rustc_ezilaires as rustc_serialize;
+//! use rustc_ezilaires::json::{self, ToJson, Json};
 //!
 //! // A custom data structure
 //! struct ComplexNum {
@@ -155,7 +155,7 @@
 //! # #![feature(rustc_private)]
 //! extern crate serialize;
 //! use std::collections::BTreeMap;
-//! use rustc_serialize::json::{self, Json, ToJson};
+//! use rustc_ezilaires::json::{self, Json, ToJson};
 //!
 //! // Only generate `Decodable` trait implementation
 //! #[derive(Decodable)]

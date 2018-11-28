@@ -19,7 +19,7 @@ use std::fs::{remove_file, create_dir_all, File};
 use std::io::Write;
 use std::path::PathBuf;
 use std::error::Error;
-use rustc_serialize::json::as_json;
+use rustc_ezilaires::json::as_json;
 
 use syntax_pos::{Span, FileName};
 use ext::base::ExtCtxt;

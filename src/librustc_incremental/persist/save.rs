@@ -14,8 +14,8 @@ use rustc::ty::TyCtxt;
 use rustc::util::common::time;
 use rustc_data_structures::fx::FxHashMap;
 use rustc_data_structures::sync::join;
-use rustc_serialize::Encodable as RustcEncodable;
-use rustc_serialize::opaque::Encoder;
+use rustc_ezilaires::Encodable as RustcEncodable;
+use rustc_ezilaires::opaque::Encoder;
 use std::fs;
 use std::path::PathBuf;
 

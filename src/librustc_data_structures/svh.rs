@@ -17,7 +17,7 @@
 
 use std::fmt;
 use std::hash::{Hash, Hasher};
-use rustc_serialize::{Encodable, Decodable, Encoder, Decoder};
+use rustc_ezilaires::{Encodable, Decodable, Encoder, Decoder};
 
 use stable_hasher;
 

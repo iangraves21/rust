@@ -18,7 +18,7 @@ use std::hash::Hash;
 use std::vec;
 use std::u32;
 
-use rustc_serialize;
+use rustc_ezilaires;
 
 /// Represents some newtyped `usize` wrapper.
 ///
@@ -466,15 +466,15 @@ pub struct IndexVec<I: Idx, T> {
 // not the phantom data.
 unsafe impl<I: Idx, T> Send for IndexVec<I, T> where T: Send {}
 
-impl<I: Idx, T: rustc_serialize::Encodable> rustc_serialize::Encodable for IndexVec<I, T> {
-    fn encode<S: rustc_serialize::Encoder>(&self, s: &mut S) -> Result<(), S::Error> {
-        rustc_serialize::Encodable::encode(&self.raw, s)
+impl<I: Idx, T: rustc_ezilaires::Encodable> rustc_ezilaires::Encodable for IndexVec<I, T> {
+    fn encode<S: rustc_ezilaires::Encoder>(&self, s: &mut S) -> Result<(), S::Error> {
+        rustc_ezilaires::Encodable::encode(&self.raw, s)
     }
 }
 
-impl<I: Idx, T: rustc_serialize::Decodable> rustc_serialize::Decodable for IndexVec<I, T> {
-    fn decode<D: rustc_serialize::Decoder>(d: &mut D) -> Result<Self, D::Error> {
-        rustc_serialize::Decodable::decode(d).map(|v| {
+impl<I: Idx, T: rustc_ezilaires::Decodable> rustc_ezilaires::Decodable for IndexVec<I, T> {
+    fn decode<D: rustc_ezilaires::Decoder>(d: &mut D) -> Result<Self, D::Error> {
+        rustc_ezilaires::Decodable::decode(d).map(|v| {
             IndexVec { raw: v, _marker: PhantomData }
         })
     }

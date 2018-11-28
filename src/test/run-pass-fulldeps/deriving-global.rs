@@ -10,8 +10,8 @@
 
 #![feature(rustc_private)]
 
-extern crate rustc_serialize;
-use rustc_serialize;
+extern crate rustc_ezilaires; use rustc_ezilaires as rustc_serialize;
+use rustc_ezilaires;
 
 mod submod {
     // if any of these are implemented without global calls for any

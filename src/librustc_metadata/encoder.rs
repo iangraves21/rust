@@ -33,7 +33,7 @@ use rustc::session::config::{self, CrateType};
 use rustc::util::nodemap::FxHashMap;
 
 use rustc_data_structures::stable_hasher::StableHasher;
-use rustc_serialize::{Encodable, Encoder, SpecializedEncoder, opaque};
+use rustc_ezilaires::{Encodable, Encoder, SpecializedEncoder, opaque};
 
 use std::hash::Hash;
 use std::path::Path;

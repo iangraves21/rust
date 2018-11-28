@@ -42,7 +42,7 @@ use ty::layout::{self, Size};
 use middle::region;
 use std::io;
 use std::hash::Hash;
-use rustc_serialize::{Encoder, Decodable, Encodable};
+use rustc_ezilaires::{Encoder, Decodable, Encodable};
 use rustc_data_structures::fx::FxHashMap;
 use rustc_data_structures::sync::{Lock as Mutex, HashMapExt};
 use rustc_data_structures::tiny_list::TinyList;
@@ -86,8 +86,8 @@ pub struct GlobalId<'tcx> {
 #[derive(Copy, Clone, Eq, Hash, Ord, PartialEq, PartialOrd, Debug)]
 pub struct AllocId(pub u64);
 
-impl ::rustc_serialize::UseSpecializedEncodable for AllocId {}
-impl ::rustc_serialize::UseSpecializedDecodable for AllocId {}
+impl ::rustc_ezilaires::UseSpecializedEncodable for AllocId {}
+impl ::rustc_ezilaires::UseSpecializedDecodable for AllocId {}
 
 #[derive(RustcDecodable, RustcEncodable)]
 enum AllocKind {

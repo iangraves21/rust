@@ -14,17 +14,17 @@
 
 #![feature(rustc_private)]
 
-extern crate rustc_serialize;
-use rustc_serialize;
+extern crate rustc_ezilaires; use rustc_ezilaires as rustc_serialize;
+use rustc_ezilaires;
 
 use std::io::Cursor;
 use std::io::prelude::*;
 use std::fmt;
 use std::slice;
 
-use rustc_serialize::{Encodable, Encoder};
-use rustc_serialize::json;
-use rustc_serialize::opaque;
+use rustc_ezilaires::{Encodable, Encoder};
+use rustc_ezilaires::json;
+use rustc_ezilaires::opaque;
 
 #[derive(RustcEncodable)]
 struct Foo {

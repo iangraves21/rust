@@ -43,7 +43,7 @@ extern crate rustc_target;
 #[macro_use]
 extern crate smallvec;
 
-extern crate rustc_serialize; // used by deriving
+extern crate rustc_ezilaires; use rustc_ezilaires as rustc_serialize; // used by deriving
 
 use rustc_data_structures::sync::Lock;
 use rustc_data_structures::bit_set::GrowableBitSet;

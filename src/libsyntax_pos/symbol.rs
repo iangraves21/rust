@@ -17,7 +17,7 @@ use {Span, DUMMY_SP, GLOBALS};
 
 use rustc_data_structures::fx::FxHashMap;
 use arena::DroplessArena;
-use rustc_serialize::{Decodable, Decoder, Encodable, Encoder};
+use rustc_ezilaires::{Decodable, Decoder, Encodable, Encoder};
 use std::fmt;
 use std::str;
 use std::cmp::{PartialEq, Ordering, PartialOrd, Ord};

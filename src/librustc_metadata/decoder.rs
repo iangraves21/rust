@@ -36,7 +36,7 @@ use std::io;
 use std::mem;
 use std::u32;
 
-use rustc_serialize::{Decodable, Decoder, SpecializedDecoder, opaque};
+use rustc_ezilaires::{Decodable, Decoder, SpecializedDecoder, opaque};
 use syntax::attr;
 use syntax::ast::{self, Ident};
 use syntax::source_map;

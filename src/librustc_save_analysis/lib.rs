@@ -24,7 +24,7 @@ extern crate rustc;
 extern crate log;
 extern crate rustc_data_structures;
 extern crate rustc_codegen_utils;
-extern crate rustc_serialize;
+extern crate rustc_ezilaires; use rustc_ezilaires as rustc_serialize;
 extern crate rustc_target;
 extern crate rustc_typeck;
 #[macro_use]
@@ -1154,7 +1154,7 @@ fn find_config(supplied: Option<Config>) -> Config {
         return config;
     }
     match env::var_os("RUST_SAVE_ANALYSIS_CONFIG") {
-        Some(config_string) => rustc_serialize::json::decode(config_string.to_str().unwrap())
+        Some(config_string) => rustc_ezilaires::json::decode(config_string.to_str().unwrap())
             .expect("Could not deserialize save-analysis config"),
         None => Config::default(),
     }

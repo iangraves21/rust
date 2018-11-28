@@ -37,7 +37,7 @@ extern crate core;
 extern crate ena;
 #[macro_use]
 extern crate log;
-extern crate rustc_serialize; // used by deriving
+extern crate rustc_ezilaires; use rustc_ezilaires as rustc_serialize; // used by deriving
 #[cfg(unix)]
 extern crate libc;
 extern crate parking_lot;
@@ -54,7 +54,7 @@ extern crate smallvec;
 #[allow(unused_extern_crates)]
 extern crate rustc_cratesio_shim;
 
-pub use rustc_serialize::hex::ToHex;
+pub use rustc_ezilaires::hex::ToHex;
 
 pub mod macros;
 pub mod svh;

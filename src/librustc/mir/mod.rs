@@ -25,7 +25,7 @@ use rustc_data_structures::graph::{self, GraphPredecessors, GraphSuccessors};
 use rustc_data_structures::indexed_vec::{Idx, IndexVec};
 use rustc_data_structures::sync::Lrc;
 use rustc_data_structures::sync::MappedReadGuard;
-use rustc_serialize;
+use rustc_ezilaires;
 use smallvec::SmallVec;
 use std::borrow::Cow;
 use std::fmt::{self, Debug, Formatter, Write};
@@ -456,9 +456,9 @@ impl<T> ClearCrossCrate<T> {
     }
 }
 
-impl<T: rustc_serialize::Encodable> rustc_serialize::UseSpecializedEncodable
+impl<T: rustc_ezilaires::Encodable> rustc_ezilaires::UseSpecializedEncodable
     for ClearCrossCrate<T> {}
-impl<T: rustc_serialize::Decodable> rustc_serialize::UseSpecializedDecodable
+impl<T: rustc_ezilaires::Decodable> rustc_ezilaires::UseSpecializedDecodable
     for ClearCrossCrate<T> {}
 
 /// Grouped information about the source code origin of a MIR entity.

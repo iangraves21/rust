@@ -14,11 +14,11 @@
 
 #![feature(rustc_private)]
 
-extern crate rustc_serialize;
+extern crate rustc_ezilaires; use rustc_ezilaires as rustc_serialize;
 
 use std::fmt;
-use rustc_serialize::{Encoder, Encodable};
-use rustc_serialize::json;
+use rustc_ezilaires::{Encoder, Encodable};
+use rustc_ezilaires::json;
 
 struct Foo<T: Encodable> {
     v: T,

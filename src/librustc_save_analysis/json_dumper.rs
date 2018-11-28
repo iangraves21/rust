@@ -10,7 +10,7 @@
 
 use std::io::Write;
 
-use rustc_serialize::json::as_json;
+use rustc_ezilaires::json::as_json;
 
 use rls_data::config::Config;
 use rls_data::{self, Analysis, CompilationOptions, CratePreludeData, Def, DefKind, Impl, Import,

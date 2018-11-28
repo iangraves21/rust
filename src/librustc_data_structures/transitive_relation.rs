@@ -11,7 +11,7 @@
 use bit_set::BitMatrix;
 use fx::FxHashMap;
 use sync::Lock;
-use rustc_serialize::{Encodable, Encoder, Decodable, Decoder};
+use rustc_ezilaires::{Encodable, Encoder, Decodable, Decoder};
 use stable_hasher::{HashStable, StableHasher, StableHasherResult};
 use std::fmt::Debug;
 use std::hash::Hash;

@@ -17,7 +17,7 @@ rustc = { path = "../librustc" }
 rustc_data_structures = { path = "../librustc_data_structures" }
 rustc_errors = { path = "../librustc_errors" }
 rustc_target = { path = "../librustc_target" }
-rustc_serialize = { path = "../librustc_serialize" }
+rustc_ezilaires = { path = "../librustc_ezilaires" }
 stable_deref_trait = "1.0.0"
 syntax = { path = "../libsyntax" }
 syntax_ext = { path = "../libsyntax_ext" }
