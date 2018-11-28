@@ -13,7 +13,7 @@
 extern crate env_logger;
 extern crate syntax;
 extern crate rustdoc;
-extern crate serialize as rustc_serialize;
+extern crate rustc_ezilaires;
 
 use std::collections::BTreeMap;
 use std::env;
@@ -27,7 +27,7 @@ use std::cell::RefCell;
 use syntax::diagnostics::metadata::{get_metadata_dir, ErrorMetadataMap, ErrorMetadata};
 
 use rustdoc::html::markdown::{Markdown, IdMap, ErrorCodes, PLAYGROUND};
-use rustc_serialize::json;
+use rustc_ezilaires::json;
 
 enum OutputFormat {
     HTML(HTMLFormatter),

@@ -51,12 +51,11 @@ extern crate rustc_incremental;
 extern crate rustc_metadata;
 extern crate rustc_mir;
 extern crate rustc_resolve;
-extern crate rustc_save_analysis;
 extern crate rustc_traits;
 extern crate rustc_codegen_utils;
 extern crate rustc_typeck;
 extern crate scoped_tls;
-extern crate serialize;
+extern crate rustc_ezilaires;
 extern crate smallvec;
 #[macro_use]
 extern crate log;
@@ -75,9 +74,6 @@ extern crate jemalloc_sys;
 use driver::CompileController;
 use pretty::{PpMode, UserIdentifiedItem};
 
-use rustc_resolve as resolve;
-use rustc_save_analysis as save;
-use rustc_save_analysis::DumpHandler;
 use rustc_data_structures::sync::{self, Lrc};
 use rustc_data_structures::OnDrop;
 use rustc::session::{self, config, Session, build_session, CompileResult};
@@ -91,10 +87,10 @@ use rustc::lint;
 use rustc_metadata::locator;
 use rustc_metadata::cstore::CStore;
 use rustc_metadata::dynamic_lib::DynamicLibrary;
-use rustc::util::common::{time, ErrorReported};
+use rustc::util::common::{ErrorReported};
 use rustc_codegen_utils::codegen_backend::CodegenBackend;
 
-use serialize::json::ToJson;
+use rustc_ezilaires::json::ToJson;
 
 use std::any::Any;
 use std::borrow::Cow;
@@ -943,10 +939,6 @@ impl<'a> CompilerCalls<'a> for RustcDefaultCalls {
             control.after_hir_lowering.stop = Compilation::Stop;
         }
 
-        if sess.opts.debugging_opts.save_analysis {
-            enable_save_analysis(&mut control);
-        }
-
         if sess.print_fuel_crate.is_some() {
             let old_callback = control.compilation_done.callback;
             control.compilation_done.callback = box move |state| {
@@ -959,24 +951,6 @@ impl<'a> CompilerCalls<'a> for RustcDefaultCalls {
         }
         control
     }
-}
-
-pub fn enable_save_analysis(control: &mut CompileController) {
-    control.keep_ast = true;
-    control.after_analysis.callback = box |state| {
-        time(state.session, "save analysis", || {
-            save::process_crate(state.tcx.unwrap(),
-                                state.expanded_crate.unwrap(),
-                                state.analysis.unwrap(),
-                                state.crate_name.unwrap(),
-                                state.input,
-                                None,
-                                DumpHandler::new(state.out_dir,
-                                                 state.crate_name.unwrap()))
-        });
-    };
-    control.after_analysis.run_callback_on_error = true;
-    control.make_glob_map = resolve::MakeGlobMap::Yes;
 }
 
 impl RustcDefaultCalls {

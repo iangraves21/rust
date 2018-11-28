@@ -11,8 +11,8 @@
 #![allow(unused_imports)]
 #![feature(rustc_private)]
 
-extern crate serialize;
-use serialize::json::Object;
+extern crate rustc_ezilaires; use rustc_ezilaires as rustc_serialize;
+use rustc_ezilaires::json::Object;
 
 pub fn main() {
     println!("Hello world!");

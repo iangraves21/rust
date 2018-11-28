@@ -11,7 +11,7 @@
 use encoder::EncodeContext;
 use schema::{Lazy, LazySeq};
 use rustc::ty::TyCtxt;
-use rustc_serialize::Encodable;
+use rustc_ezilaires::Encodable;
 
 /// The IsolatedEncoder provides facilities to write to crate metadata while
 /// making sure that anything going through it is also feed into an ICH hasher.

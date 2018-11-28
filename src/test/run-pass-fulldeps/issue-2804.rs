@@ -12,10 +12,10 @@
 #![allow(dead_code)]
 #![feature(rustc_private)]
 
-extern crate serialize;
+extern crate rustc_ezilaires; use rustc_ezilaires as rustc_serialize;
 
 use std::collections::HashMap;
-use serialize::json::{self, Json};
+use rustc_ezilaires::json::{self, Json};
 use std::option;
 
 enum object {

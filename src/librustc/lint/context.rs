@@ -33,7 +33,7 @@ use lint::{Level, Lint, LintId, LintPass, LintBuffer};
 use lint::builtin::BuiltinLintDiagnostics;
 use lint::levels::{LintLevelSets, LintLevelsBuilder};
 use middle::privacy::AccessLevels;
-use rustc_serialize::{Decoder, Decodable, Encoder, Encodable};
+use rustc_ezilaires::{Decoder, Decodable, Encoder, Encodable};
 use session::{config, early_error, Session};
 use ty::{self, TyCtxt, Ty};
 use ty::layout::{LayoutError, LayoutOf, TyLayout};

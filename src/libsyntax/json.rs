@@ -31,7 +31,7 @@ use std::io::{self, Write};
 use std::vec;
 use std::sync::{Arc, Mutex};
 
-use rustc_serialize::json::{as_json, as_pretty_json};
+use rustc_ezilaires::json::{as_json, as_pretty_json};
 
 pub struct JsonEmitter {
     dst: Box<dyn Write + Send>,

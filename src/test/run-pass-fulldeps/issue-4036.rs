@@ -16,9 +16,9 @@
 
 #![feature(rustc_private)]
 
-extern crate serialize;
+extern crate rustc_ezilaires; use rustc_ezilaires as rustc_serialize;
 
-use serialize::{json, Decodable};
+use rustc_ezilaires::{json, Decodable};
 
 pub fn main() {
     let json = json::from_str("[1]").unwrap();
