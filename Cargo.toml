@@ -19,13 +19,12 @@ members = [
   "src/tools/rust-installer",
   "src/tools/cargo",
   "src/tools/rustdoc",
-  "src/tools/rls",
   "src/tools/rustfmt",
   "src/tools/miri",
   "src/tools/rustdoc-themes",
 ]
 exclude = [
-  "src/tools/rls/test_data",
+  "src/tools/rls",
   "build",
   # HACK(eddyb) This hardcodes the fact that our CI uses `/checkout/obj`.
   "obj",
